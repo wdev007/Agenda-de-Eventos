@@ -1,6 +1,80 @@
 .navbar {
-  background-color: #f52932 !important;
-  height: 30vh;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  display: block !important;
+  justify-content: flex-start !important;
+  background-color: #ff2b34 !important;
+  height: 40vh;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.logo {
+  margin-left: 10%;
+}
+
+#navbarText {
+  margin-right: 10%;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 0 !important;
+  margin-bottom: 2%;
+  margin-left: 12%;
+}
+
+#btn-divulgar {
+  background-color: white;
+  color: #ff2b34;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+#btn-divulgar:hover {
+  background-color: #cc222a;
+  color: white;
+}
+
+#btn-login {
+  background-color: #ff2b34;
+  color: white;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin: 0 10px;
+}
+
+#btn-login:hover {
+  background-color: white;
+  color: black;
+}
+
+.menu h3 {
+  color: white;
+  font-size: 2.8rem !important;
+}
+
+.menu {
+  width: 75%;
+  margin-left: 12%;
+}
+
+.form-control {
+  border-radius: 20px !important;
+}
+
+#areaEvento {
+  margin-left: 25%;
+}
+
+.form-row {
+  margin-top: 1%;
+}
+
+.opcoes-menu {
+  display: flex;
+  justify-content: space-around;
 }

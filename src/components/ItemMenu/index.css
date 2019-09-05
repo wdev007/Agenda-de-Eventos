@@ -1,0 +1,18 @@
+.card {
+  background-color: #cc222a !important;
+  color: white;
+  max-width: 7rem;
+  min-width: 7rem;
+  height: 7rem;
+  border-radius: 25% !important;
+  /* margin-right: 5%; */
+}
+
+.card:hover {
+  background-color: #ff2b34 !important;
+}
+
+h5 {
+  margin-top: 0.5rem !important;
+  font-size: 0.65rem !important;
+}

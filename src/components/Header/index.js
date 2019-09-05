@@ -1,42 +1,90 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./index.css";
+import logo from "../../assets/images/logo.svg";
+import ItemMenu from "../ItemMenu";
 
 export default () => (
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">
-      Navbar w/ text
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarText"
-      aria-controls="navbarText"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">
-            Home <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Features
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Pricing
-          </a>
-        </li>
-      </ul>
-      <span class="navbar-text">Navbar text with an inline element</span>
+  <nav className="navbar navbar-expand-lg navbar-dark">
+    <div className="navbar-menu">
+      <img src={logo} alt="Doity" />
+      <div>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <Link className="nav-link" href="#">
+              CONHEÇA A DOITY
+            </Link>
+          </li>
+          <li class="nav-item active">
+            <Link class="nav-link" href="#">
+              BLOG
+            </Link>
+          </li>
+          <li class="nav-item">
+            <button id="btn-divulgar">Divulgar Evento</button>
+          </li>
+          <li class="nav-item">
+            <button id="btn-login">Login</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="menu">
+      <h3>Explore eventos ao redor do Brasil</h3>
+      <div class="form-row">
+        <div class="form-group col-md-7">
+          <input
+            type="email"
+            class="form-control"
+            id="tipoEvento"
+            placeholder="Que tipo de evento você procura?"
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <input
+            type="password"
+            class="form-control"
+            id="areaEvento"
+            placeholder="Escolha uma área"
+          />
+        </div>
+      </div>
+      <div className="opcoes-menu">
+        <ItemMenu
+          img={require("../../assets/images/academic.png")}
+          name="Academicos"
+        />
+        <ItemMenu
+          img={require("../../assets/images/church.png")}
+          name="Religiosos"
+        />
+        <ItemMenu
+          img={require("../../assets/images/trophy.png")}
+          name="Esportivos"
+        />
+        <ItemMenu
+          img={require("../../assets/images/karaoke.png")}
+          name="Shows"
+        />
+        <ItemMenu
+          img={require("../../assets/images/cutlery.png")}
+          name="Gastronomicos"
+        />
+        <ItemMenu
+          // img={require("../../assets/images/academic.png")}
+          name="Workshops"
+        />
+        <ItemMenu
+          // img={require("../../assets/images/academic.png")}
+          name="Tecnologia"
+        />
+        <ItemMenu
+          // img={require("../../assets/images/academic.png")}
+          name="Outros"
+        />
+      </div>
     </div>
   </nav>
 );
