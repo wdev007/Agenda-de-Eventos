@@ -3,7 +3,7 @@ import React from "react";
 import "./index.css";
 
 export default props => (
-  <div className="card-list">
+  <div className="card">
     <img
       src={props.imagem}
       className="card-img-top img-fluid"

@@ -3,7 +3,7 @@ import React from "react";
 import "./index.css";
 
 export default props => (
-  <div class="card text-white mb-3">
+  <div class="my-card text-white mb-3">
     <div class="card-body">
       <img
         src={

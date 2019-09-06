@@ -1,4 +1,4 @@
-.card {
+.my-card {
   background-color: #cc222a !important;
   color: white;
   max-width: 7rem;
@@ -8,7 +8,7 @@
   /* margin-right: 5%; */
 }
 
-.card:hover {
+.my-card:hover {
   background-color: #ff2b34 !important;
 }
 
