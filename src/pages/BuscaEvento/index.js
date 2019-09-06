@@ -23,6 +23,7 @@ export default function({ history }) {
         {events.map(item => (
           <Card
             key={item.id}
+            id={item.id}
             descricao={item.descricao}
             data={item.data}
             nome={item.nome}

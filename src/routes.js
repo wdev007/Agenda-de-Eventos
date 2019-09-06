@@ -11,7 +11,7 @@ export default () => (
     <Switch>
       <Route path="/" exact component={BuscaEvento} />
       <Route path="/cadastro" component={DivulgarEvento} />
-      <Route path="/evento" component={PaginaEvento} />
+      <Route path="/evento/:id/:nome" component={PaginaEvento} />
       <Route path="/lista" component={ListaEventos} />
     </Switch>
   </Router>
