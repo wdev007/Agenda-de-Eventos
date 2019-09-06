@@ -1,0 +1,32 @@
+#cadastro-evento {
+  width: 100%;
+}
+.container-formulario {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  background-color: white;
+  padding: 60px !important;
+}
+
+.area-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  border-top: 0.01rem solid rgb(143, 139, 139);
+}
+
+#formSalvar {
+  background-color: #ff2b34;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 25px;
+}
+
+#formCancelar {
+  padding: 10px 30px;
+  margin-top: 25px;
+  margin-right: 20px;
+  border: 0.01rem solid rgb(143, 139, 139);
+}

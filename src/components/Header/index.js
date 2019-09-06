@@ -22,10 +22,12 @@ export default () => (
             </Link>
           </li>
           <li class="nav-item">
-            <button id="btn-divulgar">Divulgar Evento</button>
+            <Link to="/cadastro">
+              <button id="btn-divulgar">DIVULGAR EVENTO</button>
+            </Link>
           </li>
           <li class="nav-item">
-            <button id="btn-login">Login</button>
+            <button id="btn-login">LOGIN</button>
           </li>
         </ul>
       </div>
@@ -43,12 +45,10 @@ export default () => (
           />
         </div>
         <div class="form-group col-md-4">
-          <input
-            type="password"
-            class="form-control"
-            id="areaEvento"
-            placeholder="Escolha uma área"
-          />
+          <select id="areaEvento" class="form-control">
+            <option selected>Escolha uma área</option>
+            <option>...</option>
+          </select>
         </div>
       </div>
       <div className="opcoes-menu">

@@ -1,0 +1,7 @@
+.navbar-cad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff2b34;
+  height: 7vh;
+}

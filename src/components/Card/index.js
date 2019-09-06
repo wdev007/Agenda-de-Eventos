@@ -3,13 +3,16 @@ import React from "react";
 import "./index.css";
 
 export default props => (
-  <div class="card">
-    <img src="..." class="card-img-top" alt="..." />
-    <div class="card-body">
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
+  <div className="card-list">
+    <img
+      src={props.imagem}
+      className="card-img-top img-fluid"
+      alt={props.descricao}
+    />
+    <div className="card-body">
+      <h6 className="card-subtitle mb-2 text-muted">{props.data}</h6>
+      <p className="card-text">{props.descricao}</p>
+      <h6 className="card-subtitle mb-2 text-muted">{props.local}</h6>
     </div>
   </div>
 );

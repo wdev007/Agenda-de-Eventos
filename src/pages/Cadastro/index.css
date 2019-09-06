@@ -1,0 +1,8 @@
+.breadcrumb {
+  background-color: white !important;
+  padding: 0.2rem !important;
+}
+
+.breadcrumb-item {
+  margin-top: 8px;
+}
