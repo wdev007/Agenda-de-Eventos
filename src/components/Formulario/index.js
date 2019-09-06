@@ -143,7 +143,15 @@ export default class Formulario extends React.Component {
           </div>
 
           <div className="area-btns">
-            <button type="submit" class="btn" id="formCancelar">
+            <button
+              type="button"
+              class="btn"
+              id="formCancelar"
+              onClick={e => {
+                e.preventDefault();
+                window.location.href = "www.google.com.br";
+              }}
+            >
               Cancelar
             </button>
             <button type="submit" class="btn" id="formSalvar">

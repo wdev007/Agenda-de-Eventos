@@ -1,24 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Listagem from "./pages/Listagem";
-import Cadastro from "./pages/Cadastro";
-import Header from "./components/Header";
+import BuscaEvento from "./pages/BuscaEvento";
+import DivulgarEvento from "./pages/DivulgarEvento";
+import ListaEventos from "./pages/ListaEventos";
+import PaginaEvento from "./pages/PaginaEvento";
 
 export default () => (
   <Router>
     <Switch>
-      <Route
-        path="/"
-        exact
-        render={() => (
-          <>
-            <Header />
-            <Listagem />
-          </>
-        )}
-      ></Route>
-      <Route path="/cadastro" component={Cadastro}></Route>
+      <Route path="/" exact component={BuscaEvento} />
+      <Route path="/cadastro" component={DivulgarEvento} />
+      <Route path="/evento" component={PaginaEvento} />
+      <Route path="/lista" component={ListaEventos} />
     </Switch>
   </Router>
 );

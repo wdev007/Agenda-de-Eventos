@@ -4,6 +4,36 @@
 
 .card {
   margin: 5px 0;
-  min-width: 365px !important;
+  /* min-width: 335px !important; */
   border-radius: 5% !important;
+  max-width: 270px !important;
+}
+
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+a:link {
+  background-color: none;
+  text-decoration: none;
+  color: none;
+}
+
+a:visited {
+  background-color: none;
+  text-decoration: none;
+  color: none;
+}
+
+a:hover {
+  background-color: none;
+  text-decoration: transparent;
+  color: black;
+}
+
+a:active {
+  background-color: none;
+  text-decoration: none;
+  color: none;
 }

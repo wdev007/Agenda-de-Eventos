@@ -1,0 +1,39 @@
+{
+  "eventos": [
+    {
+      "id": "1",
+      "nome": "Doity eventos",
+      "banner": "https://doity.com.br/media/doity/parceiros/509_parceiro.png",
+      "data": "20/09/2019",
+      "descricao": "Aqui é a descrição 1"
+    },
+    {
+      "id": "2",
+      "nome": "Doity eventos",
+      "banner": "https://doity.com.br/media/doity/parceiros/509_parceiro.png",
+      "data": "20/09/2019",
+      "descricao": "Aqui é a descrição 2"
+    },
+    {
+      "id": "3",
+      "nome": "Doity eventos",
+      "banner": "https://doity.com.br/media/doity/parceiros/509_parceiro.png",
+      "data": "20/09/2019",
+      "descricao": "Aqui é a descrição 3"
+    },
+    {
+      "id": "4",
+      "nome": "Doity eventos",
+      "banner": "https://doity.com.br/media/doity/parceiros/509_parceiro.png",
+      "data": "20/09/2019",
+      "descricao": "Aqui é a descrição 4"
+    },
+    {
+      "id": "5",
+      "nome": "Doity eventos",
+      "banner": "https://doity.com.br/media/doity/parceiros/509_parceiro.png",
+      "data": "20/09/2019",
+      "descricao": "Aqui é a descrição"
+    }
+  ]
+}
