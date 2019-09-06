@@ -2,11 +2,11 @@
   max-height: 100px;
 }
 
-.card {
+#card-primary {
   margin: 5px 0;
   /* min-width: 335px !important; */
   border-radius: 5% !important;
-  max-width: 270px !important;
+  max-width: 300px !important;
 }
 
 a {

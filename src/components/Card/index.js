@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./index.css";
 
 export default props => (
-  <div className="card">
+  <div className="card" id="card-primary">
     <Link to={`/evento/${props.id}/${props.nome}`}>
       <img
         src={props.imagem}
