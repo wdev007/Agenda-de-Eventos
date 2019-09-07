@@ -1,6 +1,7 @@
 import React from "react";
-import { browserHistory } from "react-router";
 import "./index.css";
+
+// import { Redirect } from "react-router-dom";
 
 export default class Formulario extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ export default class Formulario extends React.Component {
       },
       body: JSON.stringify(body)
     }).then(res => {
-      browserHistory.push("/");
+      // <Redirect to={{ pathname: "/" }}></Redirect>;
     });
   }
 
