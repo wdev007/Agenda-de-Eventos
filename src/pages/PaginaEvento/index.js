@@ -2,14 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import HeaderNav from "../../components/HeaderNav";
 import Rodape from "../../components/Rodape";
-// fetch('http://localhost:3001/eventos', {
-//   method: 'POST',
-//   headers: {
-//     'Accept': 'application/json',
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify()
-// })
+
 export default function({ match, descricao }) {
   const id = match.params.id;
   const [evento, setEvento] = useState({});

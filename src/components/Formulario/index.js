@@ -1,12 +1,68 @@
 import React from "react";
-
+import { browserHistory } from "react-router";
 import "./index.css";
 
 export default class Formulario extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      formNomeEvento: "",
+      formCategorias: "",
+      formArea: "",
+      formDescricao: "",
+      formInicio: "",
+      formHoraInicio: "",
+      formTermino: "",
+      formHoraTermino: "",
+      formTipo: "",
+      formBanner: ""
+    };
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const body = {
+      nome: this.state.formNomeEvento,
+      banner: this.state.formBanner,
+      descricao: this.state.formDescricao
+    };
+
+    fetch("http://localhost:3001/eventos", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    }).then(res => {
+      browserHistory.push("/");
+    });
+  }
+
+  handleNomeEvent(e) {
+    this.setState({ formNomeEvento: e.target.value });
+    console.log(this.state);
+  }
+
+  handleDescricaoEvent(e) {
+    this.setState({ formDescricao: e.target.value });
+    console.log(this.state);
+  }
+
+  handleDataEvent(e) {
+    this.setState({ formNomeEvento: e.target.value });
+    console.log(this.state);
+  }
+
+  handleBannerEvent(e) {
+    this.setState({ formBanner: e.target.value });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div className="container container-formulario">
-        <form id="cadastro-evento">
+        <form id="cadastro-evento" onSubmit={this.handleSubmit.bind(this)}>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="formNomeEvento">Nome do evento</label>
@@ -15,20 +71,23 @@ export default class Formulario extends React.Component {
                 class="form-control"
                 id="formNomeEvento"
                 placeholder="Nome do evento"
+                onChange={this.handleNomeEvent.bind(this)}
               />
             </div>
             <div class="form-group col-md-3">
               <label for="formCategorias">Categorias</label>
               <select id="formCategorias" class="form-control">
                 <option selected>Selecione a categoria</option>
-                <option>...</option>
+                <option>Tecnologia</option>
+                <option>Gastronomia</option>
               </select>
             </div>
             <div class="form-group col-md-3">
               <label for="formArea">Área</label>
               <select id="formArea" class="form-control">
                 <option selected>Selecione a Área</option>
-                <option>...</option>
+                <option>Tecnologia</option>
+                <option>Gastronomia</option>
               </select>
             </div>
           </div>
@@ -40,7 +99,18 @@ export default class Formulario extends React.Component {
                 id="formDescricao"
                 rows="3"
                 placeholder="Descrição"
+                onChange={this.handleDescricaoEvent.bind(this)}
               ></textarea>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="formBanner">URL do Banner</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formBanner"
+                placeholder="Nome do evento"
+                onChange={this.handleBannerEvent.bind(this)}
+              />
             </div>
           </div>
           <div className="form-row">
@@ -143,15 +213,7 @@ export default class Formulario extends React.Component {
           </div>
 
           <div className="area-btns">
-            <button
-              type="button"
-              class="btn"
-              id="formCancelar"
-              onClick={e => {
-                e.preventDefault();
-                window.location.href = "www.google.com.br";
-              }}
-            >
+            <button type="button" class="btn" id="formCancelar">
               Cancelar
             </button>
             <button type="submit" class="btn" id="formSalvar">
