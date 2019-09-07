@@ -11,7 +11,5 @@ Apoś rodar a API é hora de iniciar a aplicação React em outra aba do termina
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
+Não deu tempo de fazer com que o layout ficasse responsivo, então pode ser que na sua maquina os elementos do layout se sobreponham, caso isso ocorra de um 'CTRL' + '-' (se estiver no Chrome) para diminuir o zoom.
 
