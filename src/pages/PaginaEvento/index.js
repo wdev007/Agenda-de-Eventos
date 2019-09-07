@@ -26,18 +26,14 @@ export default function({ match, descricao }) {
         <div class="card mb-7" id="card-img">
           <img src={evento.banner} class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{evento.nome}</h5>
+            <p class="card-text">{evento.descricao}</p>
             <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">{evento.dataInicio}</small>
             </p>
           </div>
         </div>
-        <div id="card-desc">{descricao}</div>
+        {/* <div id="card-desc">{evento.descricao}</div> */}
       </div>
       <Rodape />
     </>
