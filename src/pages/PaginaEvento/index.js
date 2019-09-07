@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
+
 import HeaderNav from "../../components/HeaderNav";
 import Rodape from "../../components/Rodape";
+import Breadcrumb from "../../components/Breadcrumb";
 
 export default function({ match, descricao }) {
   const id = match.params.id;
@@ -19,6 +21,7 @@ export default function({ match, descricao }) {
   return (
     <>
       <HeaderNav input={true} />
+      <Breadcrumb />
       <div className="container">
         <div class="card mb-7" id="card-img">
           <img src={evento.banner} class="card-img-top" alt="..." />

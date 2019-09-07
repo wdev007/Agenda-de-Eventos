@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+import history from "./services/history";
 
 import BuscaEvento from "./pages/BuscaEvento";
 import DivulgarEvento from "./pages/DivulgarEvento";
@@ -7,7 +8,7 @@ import ListaEventos from "./pages/ListaEventos";
 import PaginaEvento from "./pages/PaginaEvento";
 
 export default () => (
-  <Router>
+  <Router history={history}>
     <Switch>
       <Route path="/" exact component={BuscaEvento} />
       <Route path="/cadastro" component={DivulgarEvento} />

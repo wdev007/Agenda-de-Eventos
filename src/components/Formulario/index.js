@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
 
-// import { Redirect } from "react-router-dom";
+import history from "../../services/history";
 
 export default class Formulario extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       formNomeEvento: "",
       formCategorias: "",
@@ -25,7 +25,8 @@ export default class Formulario extends React.Component {
     const body = {
       nome: this.state.formNomeEvento,
       banner: this.state.formBanner,
-      descricao: this.state.formDescricao
+      descricao: this.state.formDescricao,
+      dataInicio: this.state.formInicio
     };
 
     fetch("http://localhost:3001/eventos", {
@@ -36,7 +37,7 @@ export default class Formulario extends React.Component {
       },
       body: JSON.stringify(body)
     }).then(res => {
-      // <Redirect to={{ pathname: "/" }}></Redirect>;
+      history.push("/lista");
     });
   }
 
@@ -51,7 +52,7 @@ export default class Formulario extends React.Component {
   }
 
   handleDataEvent(e) {
-    this.setState({ formNomeEvento: e.target.value });
+    this.setState({ formInicio: e.target.value });
     console.log(this.state);
   }
 
@@ -73,6 +74,7 @@ export default class Formulario extends React.Component {
                 id="formNomeEvento"
                 placeholder="Nome do evento"
                 onChange={this.handleNomeEvent.bind(this)}
+                value={this.state.formNomeEvento}
               />
             </div>
             <div class="form-group col-md-3">
@@ -109,21 +111,27 @@ export default class Formulario extends React.Component {
                 type="text"
                 class="form-control"
                 id="formBanner"
-                placeholder="Nome do evento"
+                placeholder="URL do Banner"
                 onChange={this.handleBannerEvent.bind(this)}
               />
             </div>
           </div>
           <div className="form-row">
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
               <label for="formInicio">Inicio</label>
-              <input type="date" class="form-control" id="formInicio" />
+              <input
+                type="date"
+                class="form-control"
+                id="formInicio"
+                onChange={this.handleDataEvent.bind(this)}
+                value={this.state.formInicio}
+              />
             </div>
             <div class="form-group col-md-2">
               <label for="formHoraInicio">Hora</label>
               <input type="time" class="form-control" id="formHoraInicio" />
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
               <label for="formTermino">Termino</label>
               <input type="date" class="form-control" id="formTermino" />
             </div>
